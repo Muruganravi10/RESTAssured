@@ -3,11 +3,9 @@
 <suite name="CRUDSuite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="handson.singleuser_844542"/>
        <class name="handson.GET_844542"/>     
          <class name="handson.PUT_844542"/>
           <class name="handson.POST_844542"/>
-           <class name="handson.UPDATE_844542"/>
             <class name="handson.DELETE_844542"/>
     </classes>
   </test> <!-- Test -->

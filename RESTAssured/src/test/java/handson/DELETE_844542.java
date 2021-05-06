@@ -24,7 +24,19 @@ public void delete_the_user()
     System.out.println(response02.getStatusCode());
     Assert.assertEquals(response02.getStatusCode(),204);
     System.out.println(response02.getHeader("content-Type"));
-    Assert.assertEquals(null,response02.getHeader("content-Type"));
                          
+}
+@Test
+public void errorvalidation_for_invalid()
+{
+	
+	RestAssured.baseURI ="https://reqres.in/api/users/2";
+	 
+	Response response02= given()    
+                           .when().delete("/api/users/2");
+    Assert.assertEquals(response02.getStatusCode(),201);
+    System.out.println(response02.getHeader("content-Type"));
+   
+
 }
 }

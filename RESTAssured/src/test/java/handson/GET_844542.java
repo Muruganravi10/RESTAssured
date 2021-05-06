@@ -12,8 +12,8 @@ public class GET_844542 extends configure {
 	@Test
 	public void retrive_the_user ()
 	{   
-		 RestAssured.baseURI ="https://reqres.in/api/users/2";
-		 
+		RestAssured.baseURI ="https://reqres.in/api/users/2";
+
 		Response response = RestAssured.get("https://reqres.in/api/users?page=2");
 		System.out.println(response.getStatusCode());
 		System.out.println(response.asString());
@@ -26,5 +26,17 @@ public class GET_844542 extends configure {
 
 
 	}
+	@Test
+	public void errorvalidation_for_invalidfield()
+	{
+		RestAssured.baseURI ="https://reqres.in/api/users/2";
+
+		Response response = RestAssured.get("https://reqres.in/api/users");
+		Assert.assertEquals(response.getStatusCode(),400);
+		System.out.println("InValid status code" );
+		Assert.assertEquals(response.getHeader("content-Type"), "application/json; charset=utf-8");
+
+	}
+
 
 }

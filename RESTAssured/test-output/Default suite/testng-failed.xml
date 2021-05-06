@@ -5,7 +5,7 @@
     <classes>
       <class name="handson.DELETE_844542">
         <methods>
-          <include name="delete_the_user"/>
+          <include name="errorvalidation_for_invalid"/>
         </methods>
       </class> <!-- handson.DELETE_844542 -->
     </classes>
